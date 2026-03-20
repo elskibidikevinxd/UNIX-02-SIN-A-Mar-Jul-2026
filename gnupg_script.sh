@@ -1,1 +1,1 @@
-uname -a 
+uname -a /usr/bin/gpg
