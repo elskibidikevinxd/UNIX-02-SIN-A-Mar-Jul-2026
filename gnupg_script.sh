@@ -9,3 +9,5 @@ gpg --armor --export-secret-keys XXXXXXXXXXX #para exportar mis llaves privadas,
 gpg --armor --export #para ver nuestra llave publica y poder mandarsela a nuestro amigo
 gpg --import llave:punlica.asc #lo usamos para importar la llave de nuestro amigo
 gpg --list-keys #verificamos que tengamos la llave de nuestro amigo
+$ echo "este mensaje es secreto"> doc_no_cifrado.txt #es para crear un txt con el mensaje seleccionado, en mi caso es "este mensaje es secreto"
+gpg --output doc_cifrado.txt --encrypt --recipient kkevincruzatty@gmail.com doc_no_cifrado.txt #es para cifrar y crear un .txt para nuestro amigo, ocupamos su correo o su hash
