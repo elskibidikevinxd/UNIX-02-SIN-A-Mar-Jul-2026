@@ -1,18 +1,17 @@
 cd /dev #change directory to /dev directory 
-ls #list files and directories on the /dev directory
+ls #list files and directories on the actual folder, in this case /dev
 cd /proc #
-ls #lost files and directories on the /proc
+ls #lost files and directories on the actual folder, in this case /proc
 cat cpuinfo #it helps to search the info of the cpu 
-cd /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/ #para movernos al main
-ls #buscamos lo que tenemos en el main
-gcc saludo.c  -o saludobin #compila saludo.c y lo hace un ejecutable llamado "saludobin"
-sudo mv saludobin /bin/ #movemos saludobin a /bin/ para poderlo ejucutar desde cualquier carpeta
-saludobin #ejecuta saludobin (lo de adentro), que printa "hola mundo"
-cd /etc #provamos moviendonos a diferentes carpetas
-saludobin #ejecutamos y printa "hola mundo" desde cualquier carpeta
-pwd
+cd /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/ #we change the directory to workspaces...
+ls #list files and directories of the actual folder
+gcc saludo.c  -o saludobin #compile saludo.c and it makes an executable called "saludobin"
+sudo mv saludobin /bin/ #We move saludobin to /bin/ so we can run it from any folder
+saludobin #execute saludobin (the code inside), and it print "hola mundo"
+cd /etc #Let's try moving to different folders
+saludobin #execute and print "hola mundo" from any folder
+pwd #it shows the folder where we are
 ls -F
 cd / #moves to the root
-ls -F #list the files and directories including /(file), * (executable), @ (symbolic enlace)
+ls -F #list the files and directories including /(folders), * (executable), @ (symbolic enlace) of the actual folder (directory)
 ls -i #it helps lo search the inodos (the numbers)
-
