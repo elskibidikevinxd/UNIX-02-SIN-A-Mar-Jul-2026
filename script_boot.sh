@@ -16,3 +16,8 @@ ls --all #it shows all in the actual directory and the difference with ls -a it'
 ls -a #it shows the same that ls -all, ls -a is only a short way to write the command
 . #it's the actual directory
 .. #It's the directory one folder up (parent directory)
+Device: 7,4 #the number in the left is the major (the hard disk) and the right is the minor (the partition)
+whoami #it shows who we are, in my case codespace
+ls -lt #it shows the modification date, in my case in proyecto it shows 0 because i haven't created any file
+ls /etc | head -20 #it shows the first 20 files in /etc
+ls /dev | tail -20 #it shows the last 20 archives in /dev
