@@ -15,3 +15,6 @@ touch ~/dentro_de_newgrp.txt # Creates an empty file named 'dentro_de_newgrp.txt
 ls -la ~/dentro_de_newgrp.txt # Lists the newly created file with detailed information including its group ownership.
 mkdir -p ~/proyecto_dev/src # Creates a nested directory structure 'proyecto_dev/src' in your home directory if it does not exist.
 ls -la ~ # Lists all files and directories in your home directory with detailed information.
+exit # Exits the current sub-shell or group session.
+id -gn # Displays the name of your current primary group.
+echo "Grupo restaurado: $(id -gn)" # Prints the text "Grupo restaurado:" followed by your current primary group name.
