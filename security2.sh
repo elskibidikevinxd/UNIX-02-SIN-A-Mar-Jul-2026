@@ -21,3 +21,7 @@ echo "Grupo restaurado: $(id -gn)" # Prints the text "Grupo restaurado:" followe
 ls -la ~/antes_de_newgrp.txt ~/dentro_de_newgrp.txt # Lists both files at the same time to compare their sizes, permissions, and group ownerships.
 groupadd grupo_restringido # Creates a new system group named 'grupo_restringido'.
 gpasswd grupo_restringido # Administers the group configuration, usually prompted to set or modify the group password. the password is "12345678"
+apt install util-linux-extra # Attempts to install the package containing extra utility binaries like newgrp.
+useradd luna # Creates the standard user named 'luna' (without custom flags).
+su - luna # Switches the session to the newly created 'luna' user.
+newgrp grupo_restringido # Logs into the restricted group, which would now prompt for the password if the binary is present.
