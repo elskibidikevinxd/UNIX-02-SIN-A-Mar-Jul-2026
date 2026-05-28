@@ -19,3 +19,5 @@ exit # Exits the current sub-shell or group session.
 id -gn # Displays the name of your current primary group.
 echo "Grupo restaurado: $(id -gn)" # Prints the text "Grupo restaurado:" followed by your current primary group name.
 ls -la ~/antes_de_newgrp.txt ~/dentro_de_newgrp.txt # Lists both files at the same time to compare their sizes, permissions, and group ownerships.
+groupadd grupo_restringido # Creates a new system group named 'grupo_restringido'.
+gpasswd grupo_restringido # Administers the group configuration, usually prompted to set or modify the group password. the password is "12345678"
