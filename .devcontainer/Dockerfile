@@ -88,15 +88,15 @@ RUN git config --system --add safe.directory '*' \
 # propia terminal integrada de VS Code, pero es buena práctica dejarla
 # definida para que la imagen sea usable también con Docker puro.
 
-# Cambiar shell de login de root a zsh dentro de la imagen,
-# para que chsh ya no haga falta y todo sea consistente.
-RUN chsh -s /usr/bin/zsh root
+# Cambiar shell de login de root a bash dentro de la imagen
+RUN chsh -s /bin/bash root
 
-# Prompt institucional para los y las estudiantes del curso
-RUN cat >> /root/.zshrc <<'EOF'
+# Prompt institucional para los y las estudiantes del curso (configuración para Bash)
+RUN cat >> /root/.bashrc <<'EOF'
 
 # ===== Valida si un comando fue ejecutado correctamente =====
-PROMPT='%F{cyan}[Analista-kevin-almache]%f %F{yellow}%1~%f %(?.%F{green}✓.%F{red}✗ %?)%f %# '
+# Nota: La sintaxis de colores y condiciones cambia en Bash comparado con Zsh
+PS1='\[\e[1;36m\][Analista-kevin-almache]\[\e[0m\] \[\e[1;33m\]\W\[\e[0m\] $(if [ $? -eq 0 ]; then echo -e "\[\e[1;32m\]✓\[\e[0m\]"; else echo -e "\[\e[1;31m\]✗ $?\[\e[0m\]"; fi) \$ '
 EOF
 
-CMD ["/usr/bin/zsh"]
+CMD ["/bin/bash"]

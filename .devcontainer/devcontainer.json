@@ -84,7 +84,7 @@
                 // Creamos el perfil de Zsh para que VS Code sepa cómo lanzarlo
                 "terminal.integrated.profiles.linux": {
                     "zsh": {
-                        "path": "/bin/zsh",
+                        "path": "/bin/bash",
                         "args": ["-l"] 
                     }
                 },
