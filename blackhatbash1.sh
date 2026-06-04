@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -x-
+set -x
 #--snip--
 set +x
 bash --version # Displays the installed version and details of the Bash shell
