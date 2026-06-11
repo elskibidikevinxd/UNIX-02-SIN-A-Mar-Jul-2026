@@ -1,4 +1,4 @@
 #!/bin/bash
- if touch test123; then
+ if touch test1234; then
     echo "OK: file created"
 fi
