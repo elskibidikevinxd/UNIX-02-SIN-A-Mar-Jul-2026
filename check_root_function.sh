@@ -14,3 +14,8 @@ if check_if_root; then # Calls the check_if_root function and evaluates if it ex
 else # Executes if the function returned a failure status (1).
     echo "User is not root!" # Prints this message to the terminal if the function returned false (1).
 fi # Closes the main conditional block of the script.
+
+#useradd -m luna
+#su - luna
+#whoami
+#id
