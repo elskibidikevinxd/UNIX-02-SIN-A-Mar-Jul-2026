@@ -23,3 +23,12 @@ awk '{print $2}' log.txt
 awk '{print $3}' log.txt
 
 awk '{print $1,$NF}' log.txt
+
+awk -F',' '{print $1}' skibidipomni2
+
+touch skibidi_csv.txt
+echo "columna1,columna2,columna3" > skibidi_csv.txt
+
+echo "wasa1,wasa2,wasa3" >> skibidi_csv.txt
+
+echo "jess1,jess2,jess3" >> skibidi_csv.txt
