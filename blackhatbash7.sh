@@ -32,3 +32,13 @@ echo "columna1,columna2,columna3" > skibidi_csv.txt
 echo "wasa1,wasa2,wasa3" >> skibidi_csv.txt
 
 echo "jess1,jess2,jess3" >> skibidi_csv.txt
+
+awk 'NR < 10' log.txt
+
+head log.txt
+
+grep "42.236.10.117" log.txt
+
+awk '{print $7}' log.txt
+
+grep "42.236.10.117" log.txt | awk '{print $7}'
