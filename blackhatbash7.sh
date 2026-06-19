@@ -50,3 +50,8 @@ grep "Mozilla" log.txt
 sed 's/Mozilla/Godzilla/g' log.txt > newlog.txt
 
 grep "Godzilla" newlog.txt
+
+sed '1d' newlog.txt
+
+sed -i '1d' newlog.txt
+
