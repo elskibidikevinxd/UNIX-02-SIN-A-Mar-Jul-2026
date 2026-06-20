@@ -7,3 +7,6 @@ echo "Pinging the target: ${TARGET}..."
 ping -c 5 "${TARGET}"
 echo "The arguments are: $*"
 echo "The total number of arguments is: $#"
+for args in "$@"; do
+    echo "${args}"
+done
